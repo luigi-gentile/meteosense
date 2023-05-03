@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, TextField, Button, Avatar, Typography, Link, CircularProgress } from "@mui/material";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from "axios";
-import { toast, ToastContainer } from "react-toastify";
+import { Flip, toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const RegistrationForm = () => {
@@ -127,7 +127,7 @@ const RegistrationForm = () => {
                         Le password non corrispondono!
                     </Typography>
                 )}
-                <Box sx={{ textAlign: 'right' }}>
+                <Box sx={{ textAlign: 'right', mt: 1.5 }}>
                     <Link variant="body2" href="/login">Hai già un account? Accedi</Link>
                 </Box>
 
@@ -139,7 +139,7 @@ const RegistrationForm = () => {
                     )}
                 </Button>
             </form>
-            <ToastContainer style={{ top: 70 }} />
+            <ToastContainer transition={Flip} style={{ top: 100 }} />
         </Box>
     );
 };

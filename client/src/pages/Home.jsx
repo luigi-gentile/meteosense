@@ -39,7 +39,7 @@ const Home = () => {
                         <Map data={sensorsData} />
                     </Grid>
                     <Grid item xs={12} sm={5} >
-                        <Box sx={{ maxWidth: 500, mx: 'auto' }}>
+                        <Box sx={{ maxWidth: 550, mx: 'auto' }}>
                             <SensorSelector data={sensorsData} />
                         </Box>
                     </Grid>

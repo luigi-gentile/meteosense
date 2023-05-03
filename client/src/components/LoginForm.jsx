@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, TextField, Button, Avatar, Typography, Link, Grid, CircularProgress, Tooltip } from "@mui/material";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from "axios";
-import { toast, ToastContainer } from "react-toastify"
+import { Flip, toast, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 
@@ -166,7 +166,7 @@ const LoginForm = () => {
                     )}
                 </Button>
             </form>
-            <ToastContainer style={{ top: 70 }} />
+            <ToastContainer transition={Flip} style={{ top: 100 }} />
         </Box>
     );
 };

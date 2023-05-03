@@ -21,7 +21,7 @@ const SensorChart = (props) => {
     return (
         <Box sx={{ mt: 3 }}>
             {props.data.prop1.readings.length > 0 ? (
-                <LineChart width={500} height={300} data={props.data.prop1.readings} key={props.data.prop2}>
+                <LineChart width={550} height={300} data={props.data.prop1.readings} key={props.data.prop2}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="timestamp" tickFormatter={formatTimestamp} />
                     <YAxis dataKey={props.data.prop2} label={{
