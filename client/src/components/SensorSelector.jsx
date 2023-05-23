@@ -1,6 +1,6 @@
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { Box, Button, CircularProgress, Divider, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Tooltip, Typography, Fade } from '@mui/material';
+import { Box, Button, CircularProgress, Divider, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Tooltip, Typography, Fade, Link } from '@mui/material';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import FileSaver from 'file-saver';
@@ -181,12 +181,12 @@ function SensorSelector({ data }) {
                     color='secondary'
                     onClick={handleGetData}
                     disabled={!isDateRangeValid || isLoading || !selectedSensor || !startDate || !endDate || !selectedMeasurementType}
-                    sx={{ width: 220 }}
+                    sx={{ width: 200 }}
                 >
                     {isLoading ? (
                         <CircularProgress size={24.5} color="inherit" />
                     ) : (
-                        'Visualizza dati sensore'
+                        'Visualizza grafico'
                     )}
                 </Button>
                 <Tooltip title='Clicca per scaricare i dati' arrow placement='right'>
@@ -205,6 +205,11 @@ function SensorSelector({ data }) {
                         </Button>
                     </span>
                 </Tooltip>
+                {Object.keys(responseData).length > 0 && (
+                    <Link sx={{ mt: 1, ml: 'auto' }} href='https://snapshots.raintank.io/dashboard/snapshot/JBUwH1IwXNClwipSwOnnumUox8OJIWKA' target='_blank'>
+                        Visualizza grafici dettagliati
+                    </Link>
+                )}
             </Box>
             {Object.keys(responseData).length > 0 && (
                 <SensorChart data={{ prop1: responseData, prop2: type }} />
