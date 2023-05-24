@@ -206,7 +206,7 @@ function SensorSelector({ data }) {
                     </span>
                 </Tooltip>
                 {Object.keys(responseData).length > 0 && (
-                    <Link sx={{ mt: 1, ml: 'auto' }} href='https://snapshots.raintank.io/dashboard/snapshot/JBUwH1IwXNClwipSwOnnumUox8OJIWKA' target='_blank'>
+                    <Link sx={{ mt: 1, ml: 'auto' }} href='https://snapshots.raintank.io/dashboard/snapshot/RByOIkSaN8p9jYB9mwU1R6nP0EbBye7N' target='_blank'>
                         Visualizza grafici dettagliati
                     </Link>
                 )}
